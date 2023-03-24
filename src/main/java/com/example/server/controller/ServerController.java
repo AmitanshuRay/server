@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.ResourceAccessException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,14 +52,14 @@ public class ServerController{
         }
         return s;
     }
-    
-    // takes in server objects as JSON
-    @PostMapping
-    public ResponseEntity<?> saveByJSON(@RequestBody Server server){
+
+    // takes in server objects through a JSON encoded message body
+    @PutMapping
+    public ResponseEntity<?> saveByJSON(@RequestBody Server server) {
         repository.save(server);
         return new ResponseEntity<>("Server Added Successfully", HttpStatus.OK);
     }
-    
+
     // deletes server based on ID given
     @DeleteMapping("{id}")
     public ResponseEntity<?> deleteById(@PathVariable String id){
