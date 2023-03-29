@@ -1,4 +1,5 @@
 # Server API
+### Note: Github seems to have a problem displaying images, images can be referred to in the repository
 
 This is a Java application that provides a REST API with endpoints for searching, creating and deleting "server" objects. Spring web framework and a mongodb server are used in this project to provide this API.
 
