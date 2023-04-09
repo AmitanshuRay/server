@@ -3,8 +3,6 @@
 
 This is a Java application that provides a REST API with endpoints for searching, creating and deleting "server" objects. Spring web framework and a mongodb server are used in this project to provide this API.
 
-Project developed as part of an assignment by Kaiburr.
-
 ## Project Support Features
 
 * Users can add, view or delete server objects based on a server object's id 
